@@ -6,10 +6,9 @@ class P05 {
 
   def reverse[T](list: List[T]): List[T] = {
     @tailrec
-    def loop(original: List[T], rev: List[T]): List[T] = {
-      if (original.isEmpty) return rev
-
-      loop(original.tail, original.head :: rev)
+    def loop(original: List[T], reversed: List[T]): List[T] = original match {
+      case Nil => reversed
+      case head :: tail => loop(tail, head :: reversed)
     }
 
     loop(list, List())

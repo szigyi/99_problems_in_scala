@@ -35,4 +35,16 @@ class P03Test extends FunSuite {
     val nth = P03().nth(4, List(1, 2, 3, 6, kth, 9))
     assert(nth.equals(kth))
   }
+
+  test("find first element from long list") {
+    val kth = 18
+    val nth = P03().nth(0, List(kth, 2, 3, 6, 1, 9))
+    assert(nth.equals(kth))
+  }
+
+  test("find last element from long list") {
+    val kth = 18
+    val nth = P03().nth(4, List(2, 3, 6, 1, kth))
+    assert(nth.equals(kth))
+  }
 }
