@@ -25,5 +25,5 @@ class P06 {
 }
 
 object P06 {
-  def apply: P06 = new P06()
+  def apply(): P06 = new P06()
 }
