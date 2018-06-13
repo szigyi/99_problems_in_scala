@@ -47,4 +47,9 @@ class P03Test extends FunSuite {
     val nth = P03().nth(4, List(2, 3, 6, 1, kth))
     assert(nth.equals(kth))
   }
+
+  test("Example from website") {
+    val nth = P03().nth(2, List(1, 1, 2, 3, 5, 8))
+    assert(nth.equals(2))
+  }
 }

@@ -20,4 +20,9 @@ class P04Test extends FunSuite {
     val length = P04().length(List(1, 2, 3, 6, 58, 9))
     assert(length.equals(6))
   }
+
+  test("Example from website") {
+    val length = P04().length(List(1, 1, 2, 3, 5, 8))
+    assert(length.equals(6))
+  }
 }

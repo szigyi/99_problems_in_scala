@@ -38,4 +38,9 @@ class P05Test extends FunSuite {
     assert(reversed(3).equals(2))
     assert(reversed(4).equals(1))
   }
+
+  test("Example from website") {
+    val reversed = P05().reverse(List(1, 1, 2, 3, 5, 8))
+    assert(reversed.equals(List(8, 5, 3, 2, 1, 1)))
+  }
 }

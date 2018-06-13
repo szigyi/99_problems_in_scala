@@ -30,4 +30,9 @@ class P07Test extends FunSuite {
     assert(flatten.equals(expected))
   }
 
+//  test("Example from website") {
+//    val flatten = new P07().flatten(List(List(1, 1), 2, List(3, List(5, 8))))
+//    assert(flatten.equals(List(1, 1, 2, 3, 5, 8)))
+//  }
+
 }

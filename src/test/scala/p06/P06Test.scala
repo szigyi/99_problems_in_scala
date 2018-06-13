@@ -44,4 +44,9 @@ class P06Test extends FunSuite {
 
     assert(!new P06().isPalindrome(list))
   }
+
+  test("Example from website") {
+    val palindrome = new P06().isPalindrome(List(1, 2, 3, 2, 1))
+    assert(palindrome)
+  }
 }

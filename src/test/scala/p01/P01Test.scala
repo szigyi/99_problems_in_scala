@@ -19,4 +19,9 @@ class P01Test extends org.scalatest.FunSuite {
     val last = P01().last(List(1, 2, 3, 6, lastElement))
     assert(last.equals(lastElement))
   }
+
+  test("Example from website") {
+    val last = P01().last(List(1, 1, 2, 3, 5, 8))
+    assert(last.equals(8))
+  }
 }

@@ -27,4 +27,9 @@ class P02Test extends FunSuite {
     val actualLastButOneElement = P02().penultimate(List(1, 2, 3, 6, lastButOneElement, 9))
     assert(actualLastButOneElement.equals(lastButOneElement))
   }
+
+  test("Example from website") {
+    val actualLastButOneElement = P02().penultimate(List(1, 1, 2, 3, 5, 8))
+    assert(actualLastButOneElement.equals(5))
+  }
 }
