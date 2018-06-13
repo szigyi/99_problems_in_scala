@@ -2,12 +2,20 @@ package p07
 
 class P07 {
 
-  def flatten[T](list: List[List[T]]): List[T] = {
+  def flatten(list: List[Any]): List[Any] = {
 
-    for {
-      subList <- list
-      element <- subList
-    } yield element
+    def iterator(remaining: List[Any], acc: List[Any]): List[Any] = remaining match {
+      case Nil => acc
+      case head :: tail => head match {
+        case List => iterator(head.asInstanceOf[List[Any]], acc)
+        case _ => {
+          val newAcc = head :: acc
+          iterator(tail, newAcc)
+        }
+      }
+    }
+    iterator(list, List())
+
 
 //    def flattenIter(remaining: List[List[T]], acc: List[T]): List[T] = remaining match {
 //      case Nil => acc

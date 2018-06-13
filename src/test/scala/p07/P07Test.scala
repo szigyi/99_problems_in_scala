@@ -2,6 +2,8 @@ package p07
 
 import org.scalatest.FunSuite
 
+import scala.collection.immutable
+
 class P07Test extends FunSuite {
 
   test("Flattened empty list is empty list") {
@@ -30,9 +32,10 @@ class P07Test extends FunSuite {
     assert(flatten.equals(expected))
   }
 
-//  test("Example from website") {
-//    val flatten = P07().flatten(List(List(1, 1), 2, List(3, List(5, 8))))
-//    assert(flatten.equals(List(1, 1, 2, 3, 5, 8)))
-//  }
+  test("Example from website") {
+    val flatten = P07().flatten(List(List(1, 1), 2, List(3, List(5, 8))))
+    println(flatten)
+    assert(flatten.equals(List(1, 1, 2, 3, 5, 8)))
+  }
 
 }
