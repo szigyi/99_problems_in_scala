@@ -28,4 +28,13 @@ class P08Test extends FunSuite {
     println(s"4. $compressed")
     assert(compressed.equals(List(1, 2, 3, 4, 5, 1)))
   }
+
+  test("Example from the website") {
+    val list = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    val compressed = P08().compress(list)
+    println(s"5. $compressed")
+    assert(compressed.equals(List('a, 'b, 'c, 'a, 'd, 'e)))
+  }
+
+
 }
