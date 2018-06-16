@@ -56,4 +56,17 @@ class P09Test extends FunSuite {
       List(4)
     )))
   }
+
+  test("Example from website") {
+    val list = List('a, 'a, 'a, 'a, 'b, 'c, 'c, 'a, 'a, 'd, 'e, 'e, 'e, 'e)
+    val packed = P09().pack(list)
+    assert(packed.equals(List(
+      List('a, 'a, 'a, 'a),
+      List('b),
+      List('c, 'c),
+      List('a, 'a),
+      List('d),
+      List('e, 'e, 'e, 'e)
+    )))
+  }
 }
