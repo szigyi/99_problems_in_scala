@@ -19,7 +19,7 @@ class P08Test extends FunSuite {
     val list = List(1, 2, 1, 3, 5, 4, 5, 1)
     val compressed = P08().compress(list)
     println(s"3. $compressed")
-    assert(compressed.equals(List(1, 2, 1, 3, 5, 4, 5, 1)))
+    assert(compressed.equals(list))
   }
 
   test("consecutive duplicated elements are compressed") {
