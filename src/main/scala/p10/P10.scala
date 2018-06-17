@@ -10,7 +10,7 @@ abstract class P10 {
 
     def iter(remaining: List[List[T]], acc: List[(Int, T)]): List[(Int, T)] = remaining match {
       case Nil => acc
-      case head :: tail => iter(tail, acc :+ (head.size, head(0)))
+      case head :: tail => iter(tail, acc :+ (head.size, head.head))
     }
     if (list.isEmpty) return Nil
     val packed = p09.pack(list)
