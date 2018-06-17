@@ -24,7 +24,7 @@ class P15Test extends FunSuite {
     val list = List(1)
     val duplicate = -1
     val duplicated = P15().duplicateN(duplicate, list)
-    println(s"2. $duplicated")
+    println(s"3. $duplicated")
     assert(duplicated.equals(list))
   }
 
@@ -32,7 +32,7 @@ class P15Test extends FunSuite {
     val list = List(1)
     val duplicate = 2
     val duplicated = P15().duplicateN(duplicate, list)
-    println(s"2. $duplicated")
+    println(s"4. $duplicated")
     assert(duplicated.equals(List(1, 1)))
   }
 
@@ -40,7 +40,15 @@ class P15Test extends FunSuite {
     val list = List(1, 1, 2)
     val duplicate = 3
     val duplicated = P15().duplicateN(duplicate, list)
-    println(s"3. $duplicated")
+    println(s"5. $duplicated")
     assert(duplicated.equals(List(1, 1, 1, 1, 1, 1, 2, 2, 2)))
+  }
+
+  test("Example from website") {
+    val list = List('a, 'b, 'c, 'c, 'd)
+    val duplicate = 3
+    val duplicated = P15().duplicateN(duplicate, list)
+    println(s"6. $duplicated")
+    assert(duplicated.equals(List('a, 'a, 'a, 'b, 'b, 'b, 'c, 'c, 'c, 'c, 'c, 'c, 'd, 'd, 'd)))
   }
 }
